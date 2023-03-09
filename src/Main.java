@@ -1,18 +1,22 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String gameResult = wordle();
         System.out.println(gameResult);
     }
 
-    public static String wordle() {
+    public static String wordle() throws IOException {
         //choosing a word to be guessed from wordbank
-        //String[] wordBank = {"based", "crook", "kills", "react"};
-        String[] wordBank = {"based"};
+        String[] wordBank = {"based", "crook", "kills", "react"};
         int rnd = new Random().nextInt(wordBank.length);
         String password = wordBank[rnd];
+        System.out.println(password);
         int counter = 0;
         System.out.println("'*' on both sides of the letter means the letter is correct and in correct place.");
         System.out.println("'|' on both sides of the letter means the letter is correct but in wrong place.");

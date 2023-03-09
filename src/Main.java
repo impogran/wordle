@@ -18,8 +18,8 @@ public class Main {
         String password = wordBank[rnd];
         System.out.println(password);
         int counter = 0;
-        System.out.println("'*' on both sides of the letter means the letter is correct and in correct place.");
-        System.out.println("'|' on both sides of the letter means the letter is correct but in wrong place.");
+        System.out.println("Green color of the letter means the letter is correct and in correct place.");
+        System.out.println("Yellow color of the letter means the letter is correct but in wrong place.");
         System.out.println("Good luck!");
         while (counter < 6) {
             //read the word
